@@ -17,6 +17,7 @@ We have also provided the Excel file for you to download and test out.
 
 ## Syntax
 >If you are brand new to XLOOKUP take a quick look at the syntax table, but quickly move onto the example section of the page and don’t get bogged down on the definitions and just replicate the examples provided.
+
 The XLOOKUP function searches a range or an array, and then returns the item corresponding to the first match it finds. If no match exists, then XLOOKUP can return the closest (approximate) match. 
 ```
 =XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])
@@ -146,9 +147,13 @@ If you know how to write proper nested XLOOKUP, you have mastered this dynamic a
 =XLOOKUP(H2,A2:A20,XLOOKUP(I2,B1:F1,B2:F20))
 ```
 To better understand what is going on let’s break down our formula step by step. We have two XLOOKUPs, an outer XLOOKUP, and an inner XLOOKUP. We have to start by inner XLOOKUP
+
 ![ tips&tricks03_innerxlookup]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/17_tipstricks_3_innerxlookup.PNG.png?w=345&ssl=1)
+
 Here Happiness Score (J2) is our lookup_value and our column headers (B2:F2) are our look_array, our entire table aside from the Country column is our return_array (B2:F20). Happiness Score is the 3rd item in the column headers, XLOOKUP will then return the 3rd column from the return_array, which consists of all the happiness scores of all the countries.
 Next Let’s take a look again at the outer XLOOKUP and explain what is going on.
+
 ![ tips&tricks03_outerxlookup]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/18_tipstricks_3_outerxlookup.PNG.png?w=345&ssl=1)
+
 Here XLOOKUP will search for Mexico (I2) in the Country column (A2:A20). Mexico is the 14th country in lookup_array. XLOOKUP will then return the 14th item from the result of inner XLOOKUP which was a list of happiness scores of all the countries. 
 Now if we change Happiness Score (J2) to “Region” or any other column name, XLOOKUP will return the correct result every time. We can even keep Happiness Score and change the country. Nested XLOOKUP gives analysts so much more flexibility with very little effort.
