@@ -74,7 +74,7 @@ But what if we want to provide a more descriptive result in case a value is miss
 
 ![example03_formula]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/06_example_3_formula.png?resize=1080%2C382&ssl=1)
 ```
-=XLOOKUP(H2, D2:D20, A2:A20, "Country not found")
+=XLOOKUP(H2, A2:A20, D2:D20, "Country not found")
 ```
 Here XLOOKUP will look for United Kingdom (H2) in the Country column (A2:A20), and since United Kingdom is missing the message "Country not found" will be returned.
 
@@ -99,7 +99,7 @@ But if you provide the match_mode argument (for example 1), you'll get Belgium.
 
 ![example04_formula]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/ccpy.png?resize=1080%2C403&ssl=1)
 ```
-=XLOOKUP(H2, A2:A20, D2:D20, "Score not found", 1)
+=XLOOKUP(H2, D2:D20, A2:A20, "Score not found", 1)
 ```
 Here the XLOOKUP will look for a score of 6 (H2) in the Happiness Score column (D2:D20) but cannot find it. Since we have set the match_mode to 1 (1 means next largest item if an exact match is not found), XLOOKUP will look for next value in the Happiness Score column (D2:D20) that is greater than 6 (H2) and finds the cell D20 which is the 19th item in the lookup_array. Next, XLOOKUP will return the 19th element in the return_array (A2:A20) which is Belgium.
 
