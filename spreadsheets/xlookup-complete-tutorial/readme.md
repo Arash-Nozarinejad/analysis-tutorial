@@ -1,4 +1,4 @@
-# XLOOKUP Complete Beginner to Advanced Tutorial
+﻿# XLOOKUP Complete Beginner to Advanced Tutorial
 
 ## Introduction
 Lookup functions in spreadsheets allow users to find items in a range based on a criterion they provide. XLOOKUP is the new Microsoft Excel lookup function that has almost complete replaced VLOOKUP, HLOOKUP, and the INDEX/MATCH. XLOOKUP is part of the advanced Excel functions called dynamic arrays functions.
@@ -57,7 +57,7 @@ XLOOKUP will look for the first instance of Belgium (J2) in the countries row (B
 ### Example 3 – if_not_found argument
 We’ll now introduce our first optional argument: if_not_found.
 The if_not_found argument is a text that will be returned if a matching lookup_value could not be found in the lookup_array.
-Let’s say we want to find the happiness of score of the country of Canada from our table. If we use the arguments from example 1, we’ll get the following result
+Let’s say we want to find the happiness of score of the country of United Kingdom from our table. If we use the arguments from example 1, we’ll get the following result
 ![example03_na]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/05.png?resize=1080%2C381&ssl=1)
 ```
 =XLOOKUP(H2, A2:A20, B2:B20)
@@ -67,7 +67,7 @@ But what if we want to provide a more descriptive result in case a value is miss
 ```
 =XLOOKUP(H2, A2:A20, B2:B20, “Country not found”)
 ```
-Here XLOOKUP will look for Canada (H2) in the Country column (A2:A20), and since Canada is missing the message “Country not found” will be returned.
+Here XLOOKUP will look for United Kingdom (H2) in the Country column (A2:A20), and since United Kingdom is missing the message “Country not found” will be returned.
 
 ### Example 4 – match_mode
 Next in our list of optional arguments is: match_mode.
@@ -101,12 +101,13 @@ The search_mode argument specifies how will XLOOKUP search the lookup_array. The
 * -1 – XLOOKUP perform a reverse search starting at the last item.
 * 2 – XLOOKUP perform a binary search that relies on lookup_array being sorted in ascending order. If not sorted, invalid results will be returned.
 * -1 – XLOOKUP perform a binary search that relies on lookup_array being sorted in descending order. If not sorted, invalid results will be returned.
-Let’s say you wanted to find which north American country in our subset data is the least happy country based on its Happiness Score. You’ll write the following:
+Let’s say you wanted to find which Latin American country in our subset data is the least happy country based on its Happiness Score. You’ll write the following:
+
 ![example05_formula]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/ccpy.png?resize=1080%2C403&ssl=1)
 ```
 =XLOOKUP(H2, B2:B20, A2:A20, “Region not found”, 1, -1)
 ```
-Here the XLOOKUP will search for the first instance of North America (H2) in the Region column (B2:B20) starting from the bottom which result is the 5th item from the bottom. Next XLOOKUP will return the 5th item from the bottom in the Country column (A2:A20) which is America.
+Here the XLOOKUP will search for the first instance of Latin America and Caribbean (H2) in the Region column (B2:B20) starting from the bottom which result is the 5th item from the bottom. Next XLOOKUP will return the 5th item from the bottom in the Country column (A2:A20) which is Brazil.
 
 ## Tips & Tricks
 XLOOKUP is a powerful yet simple function and there are numerous ways to utilize its potential. Here, we’ll teach you three simple tips & tricks to master XLOOKUP.
