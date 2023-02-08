@@ -186,7 +186,7 @@ Here XLOOKUP will search for Mexico (I2) in the Country column (A2:A20). Mexico 
 Now if we change Happiness Score (J2) to "Region" or any other column name, XLOOKUP will return the correct result every time. We can even keep Happiness Score and change the country. Nested XLOOKUP gives analysts so much more flexibility with very little effort.
 
 ## Farewell
-Thank you for reading this Github article on XLOOKUP. Creating this tutorial project was very fun and I hope you enjoyed reading it as much as I enjoy creating it.
+Thank you for reading this Github article on XLOOKUP. Creating this tutorial project was very fun and I hope you enjoyed reading it as much as I enjoyed creating it.
 
 You can visit our website for more tutorials, guides, case studies, and more by [clicking here](https://www.analysistutorial.com/).
 
