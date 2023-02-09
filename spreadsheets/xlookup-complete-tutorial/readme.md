@@ -35,11 +35,11 @@ Argument|Description
 ## Real life examples
 We'll be using a subset of 2015 World Happiness index data.
 
-![dataset]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/01_dataset.png?w=912&ssl=1)
+![dataset](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_01_dataset.png?w=939&ssl=1)
 ### Example 1 - Vertical Lookup
 We'll start by using only the required arguments: lookup_value, lookup_array, and return_array to find the happiness score of the country of Belgium. This is an example of a vertical lookup using XLOOKUP.
 
-![example01_formula]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/02_example_1_formula.png?resize=1080%2C420&ssl=1)
+![example01_formula](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_02_ex01_function.png?resize=1080%2C412&ssl=1)
 ```
 =XLOOKUP(H2, A2:A20, D2:D20)
 ```
@@ -49,11 +49,11 @@ XLOOKUP will look for the first instance of Belgium (H2) in the column of countr
 ### Example 2 - Horizontal Lookup
 For this example, we will temporarily use a subset of our data arranged in a horizontal way for the purpose of demonstration
 
-![example02_dataset]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/03_example_2_dataset.png?resize=1080%2C62&ssl=1)
+![example02_dataset](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_03_ex02_dataset.png?resize=1080%2C83&ssl=1)
 
 Now if we want to select the happiness score of the country of Belgium, we'll use the following formula:
 
-![example02_formula]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/04_example_2_formula.png?resize=1080%2C100&ssl=1)
+![example02_formula](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_04_ex021_function.png?resize=1080%2C92&ssl=1)
 ```
 =XLOOKUP(J2, B1:H1, B3:H3)
 ```
@@ -66,13 +66,13 @@ We'll now introduce our first optional argument: if_not_found.
 The if_not_found argument is a text that will be returned if a matching lookup_value could not be found in the lookup_array.
 Let's say we want to find the happiness of score of the country of United Kingdom from our table. If we use the arguments from example 1, we'll get the following result
 
-![example03_na]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/05.png?resize=1080%2C381&ssl=1)
+![example03_na](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_05_ex03_na.png?resize=1080%2C407&ssl=1)
 ```
 =XLOOKUP(H2, A2:A20, D2:D20)
 ```
 But what if we want to provide a more descriptive result in case a value is missing from the table? Like for example we want the message of "Country not found" to be shown. To do this we can use the if_not_found argument. 
 
-![example03_formula]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/06_example_3_formula.png?resize=1080%2C382&ssl=1)
+![example03_formula](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_06_ex01_function.png?resize=980%2C369&ssl=1)
 ```
 =XLOOKUP(H2, A2:A20, D2:D20, "Country not found")
 ```
@@ -85,19 +85,19 @@ When XLOOKUP can't find the lookup_value in the lookup_array, it will either ret
 
 Let's say given our data table you're looking for a country with the happiness score of 6. If you use the argument from example 1, you'll get N/A.
 
-![example04_na]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/07_example_4_na.png?resize=1080%2C403&ssl=1)
+![example04_na](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_07_ex04_na.png?resize=980%2C365&ssl=1)
 ```
 =XLOOKUP(H2, D2:D20, A2:A20)
 ```
 Or if you use the if_not_found argument in as well like example 3, you'll get "Score not found".
 
-![example04_ifnotfound]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/08_example_4_ifnotfoud.png?resize=1080%2C402&ssl=1)
+![example04_ifnotfound](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_08_ex04_scorenotfound.png?resize=980%2C366&ssl=1)
 ```
 =XLOOKUP(H2, D2:D20, A2:A20, "Score not found")
 ```
 But if you provide the match_mode argument (for example 1), you'll get Belgium.
 
-![example04_formula]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/ccpy.png?resize=1080%2C403&ssl=1)
+![example04_formula](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_09_ex04_function.png?resize=980%2C367&ssl=1)
 ```
 =XLOOKUP(H2, D2:D20, A2:A20, "Score not found", 1)
 ```
@@ -119,7 +119,7 @@ The search_mode argument specifies how will XLOOKUP search the lookup_array. The
 
 Let's say you wanted to find out which Latin American country in our data is the least happy country based on the Happiness Score. You'll write the following:
 
-![example05_formula]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/ccpy.png?resize=1080%2C403&ssl=1)
+![example05_formula](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_10_ex05_function.png?resize=980%2C341&ssl=1)
 ```
 =XLOOKUP(H2, B2:B20, A2:A20, "Region not found", 1, -1)
 ```
@@ -131,7 +131,7 @@ XLOOKUP is a powerful yet simple function and there are numerous ways to utilize
 ### Tips & Tricks #1 - Returning multiple Values
 XLOOKUP can return multiple values across multiple rows and columns. There are two ways to achieve this:
 #### 1 - By using range operator " : "
-![tips&tricks01_rangeoperator]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/11_tripstricks_1_rangeoperator.png?resize=1080%2C355&ssl=1)
+![tips&tricks01_rangeoperator](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_11_tt01_rangeoperator.png?resize=980%2C322&ssl=1)
 ```
 =XLOOKUP(H2, A2:A20,B2:B20:C2:C20)
 ```
@@ -142,24 +142,24 @@ Here XLOOKUP will first look for Iceland (H2) in the Country column (A2:A20) whi
 Note that using the range operator method the results are from columns that are next to each other. To return items from multiple columns that are not next to each other we have to use the concatenate operator.
 ##### 2 - By using string concatenate operator " & "
 
-![tips&tricks01_concatenate01]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/12_tripstricks_1_concatenate_1.png?resize=1080%2C355&ssl=1)
+![tips&tricks01_concatenate01](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_12_tt01_concatenateoperator1.png?resize=980%2C324&ssl=1)
 ```
 =XLOOKUP(H2, A2:A20,B2:B20&D2:D20)
 ```
 Again, XLOOKUP will first look for Iceland (H2) in the Country column (A2:A20) which is the 2nd item in the Country column, next XLOOKUP will look for the 2nd items in the Region column (B2:B20) and the Happiness Score column (D2:D20) but this time the results of these ranges are concatenated together and returned in a single column together. You can also make the result more readable by concatenating another string (for example ", ").
 
-![tips&tricks01_concatenate02]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/13_tripstricks_1_concatenate_2.png?resize=1080%2C355&ssl=1)
+![tips&tricks01_concatenate02](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_13_tt01_concatenateoperator2.png?resize=980%2C321&ssl=1)
 ```
 =XLOOKUP(H2, A2:A20,B2:B20&", "&D2:D20)
 ```
 ### Tips & Tricks #2 - Using multiple inputs
 For this trick we'll first introduce an extra column to our table."GDP per Capita Rounded This column is the GDP per Capita column but rounded to 2 decimal places so that multiple countries would have similar GDP for the purpose of demonstration.
 
-![tips&tricks02_data]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/14_tipstricks_2_data.png?resize=1080%2C391&ssl=1)
+![tips&tricks02_data](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_14_tt02_dataset.png?resize=980%2C356&ssl=1)
 
 XLOOKUP accepts multiple inputs and can assess them across multiple columns.
 
-![tips&tricks02_formula]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/15_tipstricks_2_formula.png?resize=1080%2C311&ssl=1)
+![tips&tricks02_formula](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_15_tt02_function.png?resize=980%2C283&ssl=1)
 ```
 =XLOOKUP(I2&J2, B2:B20&E2:E20, A2:A20)
 ```
@@ -168,18 +168,18 @@ Here, for lookup_value we have concatenated Region (I2) and GDP (J2). And for lo
 ### Tips & Tricks #3 - Using a nested XLOOKUP
 If you know how to write proper nested XLOOKUP, you have mastered this dynamic array function. Nested XLOOKUP is often used to dynamically select a column and return a single important data point. For example: Let's say you want to know the Region of the country of Mexico, you can write a simple XLOOKUP and get the results you want. However, what if you now change your mind and want to see the happiness rank of Mexico? You can either change your XLOOKUP or write a new XLOOKUP. Or, you can write a nested XLOOKUP to dynamically change the criteria you're looking for. This way you don't need to change your arguments or write a new XLOOKUP. Let's see this concept in action:
 
-![tips&tricks03_formula]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/16_tripstricks_3_formula.png?resize=1080%2C308&ssl=1)
+![tips&tricks03_formula](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_16_tt03_function.png?resize=980%2C280&ssl=1)
 ```
 =XLOOKUP(H2,A2:A20,XLOOKUP(I2,B1:F1,B2:F20))
 ```
 To better understand what is going on let's break down our formula step by step. We have two XLOOKUPs, an outer XLOOKUP, and an inner XLOOKUP. We have to start with the inner XLOOKUP
 
-![ tips&tricks03_innerxlookup]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/17_tipstricks_3_innerxlookup.PNG.png?w=345&ssl=1)
+![ tips&tricks03_innerxlookup](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_17_tt03_innerxlookup.png?w=345&ssl=1)
 
 Here Happiness Score (J2) is our lookup_value and our column headers (B2:F2) are our look_array, our entire table aside from the Country column is our return_array (B2:F20). Happiness Score is the 3rd item in the column headers, XLOOKUP will then return the 3rd column from the return_array, which consists of all the happiness scores of all the countries.
 Next Let's take a look again at the outer XLOOKUP and explain what is going on.
 
-![ tips&tricks03_outerxlookup]( https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/18_tipstricks_3_outerxlookup.PNG.png?w=345&ssl=1)
+![ tips&tricks03_outerxlookup](https://i0.wp.com/analysistutorial.com/wp-content/uploads/2023/02/00001_img_18_tt03_outerxlookup.png?w=345&ssl=1)
 
 Here XLOOKUP will search for Mexico (I2) in the Country column (A2:A20). Mexico is the 14th country in lookup_array. XLOOKUP will then return the 14th item from the result of inner XLOOKUP which was a list of happiness scores of all the countries. 
 
