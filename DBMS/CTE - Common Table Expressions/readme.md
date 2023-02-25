@@ -579,3 +579,11 @@ However, CTEs have some advantages over derived tables:
 * A CTE may be easier to read when its definitions appear at the beginning of the statement rather than embedded within it.
 
 CTEs are similar to tables created with CREATE "TEMPORARY" TABLE but need not be defined or dropped explicitly. For a CTE, you need no privileges to create tables.
+
+## Farewell
+
+Thank you for reading this Github article on CTE. Creating this tutorial project was very fun and I hope you enjoyed reading it as much as I enjoyed creating it.
+
+You can visit our website for more tutorials, guides, case studies, and more by [clicking here](https://www.analysistutorial.com/).
+
+Farewell.
