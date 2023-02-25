@@ -14,7 +14,7 @@ Whether you are just starting out or looking to advance your skills, Python is a
 
 Tutorials:
 
-* Master Python Basics While Managing Your Money: Build a Simple Book Keeping App
+* 01 - Learn Python From Scratch by Building An App
 * *Incoming*
 * *Incoming*
 
